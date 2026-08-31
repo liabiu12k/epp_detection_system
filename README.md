@@ -1,4 +1,3 @@
-# epp_detection_system
 # EPP Detection System
 
 Sistema de visión artificial para detectar el uso de Equipo de Protección Personal (EPP) en entornos de obra, con enfoque en casco, chaleco y arnés. El proyecto está diseñado como una arquitectura modular para recopilar imágenes, preprocessarlas, ejecutar inferencia y generar reportes de alertas con evidencia visual.
