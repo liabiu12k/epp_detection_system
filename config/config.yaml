@@ -1,0 +1,42 @@
+phats:
+  raw_images: "data/raw"
+  processed_images: "data/processed"
+  dataset_dir: "data/dataset"
+  models_dir: "models"
+  reports_dir: "reports"
+  logs_dir: "logs"
+
+models:
+  weights_file: "models/yolov8_epp:latest.pt"
+  variant: "yolov8n"
+  confidence_threshold: 0.5
+  classes:
+    0: "casco"
+    1: "chaleco"
+    2: "arnes"
+
+training:
+  apochs: 100
+  batch_size: 16
+  learning_rate: 0.001
+  img_size: 640
+
+acquisition:
+ method: "bluetooth" # se puede cambiar segun la camara
+ poll_interval_seconds: 30
+ max_retries: 3
+ retry_backoff_seconds: 5
+ allowed_extensions: [".jpg", ".jpeg", ".png"]
+
+reporting:
+ output_file: "reports/alertas.xlsx"
+ save-evidence_images: true
+ evidence_dir: "reports/evidencia"
+
+logging:
+ level: "INFO"
+ file: "logs/sistema.log"
+ max_bytes: 5242880
+ backup_count: 5
+
+ 
